@@ -4,8 +4,62 @@
 	<title></title>
 </head>
 <body>
+	</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+	
+		</script>
+		<script src="js/stickUp.min.js">
+		
+		</script>
+
+		<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Grupo6</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="index.html">Inicio</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="noticias.html">Noticias<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Nacionales</a></li>
+          <li><a href="#">Internacionales</a></li>
+          <li><a href="#">Departamentales</a></li>
+        </ul>
+      </li>
+      <li><a href="quienessomos.html">Quienessomos</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="lis">
+      	<a href="alerta()" onclick="alerta()">
+      		<span class="glyphicon glyphicon-user">
+
+      		</span> registrate
+      		
+      	</a>
+      		
+      </li>
+      <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    </ul>
+  </div>
+</nav>
+			<script type="text/javascript">
+				jQuery(function($){
+				$(document).ready( function() {
+				$('.navbar').stickUp();
+				});
+				});
+			</script>
+			<script type="text/javascript">
+      			funcion alerta()
+      			{
+      			alert("Esta funcion no esta disponible");
+      			}
+      		</script>
 <p>Lidia Marina Agustin Lemus</p>
 <p>Edy Oswaldo Chinchilla Portillo</p>
 <p>Mario Rolando Pacheco Acevedo</p>
+<footer>
+	ProgramandoMiFuturo@gmail.com
+</footer>
 </body>
 </html>
