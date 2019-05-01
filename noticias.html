@@ -104,9 +104,12 @@ function myFunction() {
   <input type="button"  value="enviar" onclick="valida_enviar()">
 
   <script type="text/javascript">
-    if(document.fvalida.nombre.value.length==0){
+    function valida_envia(){
+      if(document.fvalida.nombre.value.length==0){
       alert("tiene que escribir su nombre")document.fvalida.nombre.focus()return 0;
     }
+    
+    
   </script>
 </form>
 </body>
