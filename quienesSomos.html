@@ -66,12 +66,7 @@
 				});
 				});
 			</script>
-			<script type="text/javascript">
-      			funcion alerta()
-      			{
-      			alert("Esta funcion no esta disponible");
-      			}
-      		</script>
+			
 
 
 
@@ -95,6 +90,66 @@
 <br>
 <br>
 <br>
+
+<form id="valida" method="post" name="valida">
+<div align="center">
+  <label>Nombre</label>
+  <input type="text" id="nombre">
+  <br>
+  <label>Apellido</label>
+  <input type="text" id="apellido">
+  <br>
+  <label>numero</label>
+  <input type="numeric" id="numero">
+  <br>
+  <label>correo</label>
+  <input type="email" id="correo">
+  <br>
+  <button class="submit" disabled>Validar</button>
+</div>
+</form>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script type="text/javascript">
+  var name = "^[a-z A-Z]{4,30}$";
+  var apel = "^[a-z A-Z]{4,30}$";
+  var num = "^[0-9]{1,7}$";
+  var email = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,20}$";
+
+  function CheckInput(idInput, pattern)
+  {
+    return $(idInput).val().match(pattern) ? true : false;
+  }
+  function enable (idForm)
+  {
+    $(idForm + "button.submit").removeAttr("disabled");
+  }
+
+  function disable (idForm)
+  {
+    $(idForm + "button.submit").attr("disabled","disabled");
+  }
+
+  function checkForm (idForm) {
+$(idForm + " *").on("change keydown", function() {
+if (CheckInput("#nombre", name) && 
+CheckInput("#apellido", apel) && 
+CheckInput("#numero", num) && 
+CheckInput("#correo", email))
+{
+enableSubmit(idForm);
+} else {
+disableSubmit(idForm);
+}
+  });
+    
+
+$(function() {
+checkForm("#valida");
+});
+}
+  </script>
+
+
 <div class="footer">
 	ProgramandoMiFuturo@gmail.com
 </div>
