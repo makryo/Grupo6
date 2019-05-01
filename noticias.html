@@ -99,6 +99,13 @@ function myFunction() {
   document.getElementById("demo").innerHTML = text;
 }
 </script>
-
+<form>
+  <input type="text" name="nombre">
+  <script type="text/javascript">
+    if(document.fvalida.nombre.value.length==0){
+      alert("tiene que escribir su nombre")document.fvalida.nombre.focus()return 0;
+    }
+  </script>
+</form>
 </body>
 </html>
